@@ -1,0 +1,74 @@
+// ==============================================================================
+// BCG X Delivery Finance — Power BI DAX Semantic Model Measures
+// Dataset: dashboard_unified_feed.csv
+// Author: Ojas Gupta
+// ==============================================================================
+
+// 1. ACTUALS & FORECAST REVENUE (in Millions / Billions)
+Actual_Revenue_B = 
+DIVIDE(
+    SUM(dashboard_unified_feed[actual_revenue]),
+    1000000000,
+    0
+)
+
+Forecast_Revenue_B = 
+DIVIDE(
+    SUM(dashboard_unified_feed[forecast_revenue]),
+    1000000000,
+    0
+)
+
+// 2. REVENUE VARIANCE ($ Amount)
+Revenue_Variance_B = [Actual_Revenue_B] - [Forecast_Revenue_B]
+
+// 3. REVENUE VARIANCE % (vs. Baseline Plan)
+Revenue_Variance_Pct = 
+DIVIDE(
+    [Revenue_Variance_B],
+    [Forecast_Revenue_B],
+    0
+)
+
+// 4. ROLLING 4-QUARTER AVERAGE VARIANCE
+Rolling_4Q_Avg_Variance_Pct = 
+CALCULATE(
+    AVERAGEX(
+        DATESINPERIOD(
+            dashboard_unified_feed[period_end_date],
+            LASTDATE(dashboard_unified_feed[period_end_date]),
+            -4,
+            QUARTER
+        ),
+        [Revenue_Variance_Pct]
+    )
+)
+
+// 5. ANOMALY CONDITIONAL COLOR MARKER (Hex codes for visual conditional formatting)
+Anomaly_Color_Code = 
+SWITCH(
+    SELECTEDVALUE(dashboard_unified_feed[anomaly_tier]),
+    "HIGH_CONFIDENCE_ANOMALY", "#EF4444",   // Red
+    "WORTH_A_LOOK",            "#F59E0B",   // Amber
+    "NORMAL",                  "#3B82F6",   // Blue
+    "#94A3B8"                              // Neutral Gray
+)
+
+// 6. HIGH-CONFIDENCE ANOMALY COUNTER (KPI Card)
+High_Confidence_Anomaly_Count = 
+CALCULATE(
+    COUNTROWS(dashboard_unified_feed),
+    dashboard_unified_feed[anomaly_tier] = "HIGH_CONFIDENCE_ANOMALY"
+)
+
+// 7. WORTH-A-LOOK FLAG COUNTER (KPI Card)
+Worth_A_Look_Count = 
+CALCULATE(
+    COUNTROWS(dashboard_unified_feed),
+    dashboard_unified_feed[anomaly_tier] = "WORTH_A_LOOK"
+)
+
+// 8. DYNAMIC EXECUTIVE HEADER TITLE
+Dynamic_Dashboard_Title = 
+SELECTEDVALUE(dashboard_unified_feed[ticker], "Enterprise Portfolio") 
+& " | Financial Variance Tracking & Structural Anomaly Detection"

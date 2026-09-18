@@ -1,0 +1,16 @@
+ticker,model,mape_pct,rmse,evaluation_quarters,is_best_model
+AAPL,Naive,17.9,22294961609.07,20,False
+AAPL,SimpleExpSmoothing,13.32,18977653488.47,20,True
+AAPL,LinearTrend,17.35,18710893113.0,20,False
+MSFT,Naive,4.38,3220532448.21,20,False
+MSFT,SimpleExpSmoothing,4.27,3244826435.03,20,False
+MSFT,LinearTrend,3.76,2969733756.3,20,True
+AMZN,Naive,11.06,19308629854.29,20,False
+AMZN,SimpleExpSmoothing,9.67,18490862181.38,20,True
+AMZN,LinearTrend,9.67,15195835581.5,20,False
+NVDA,Naive,39.48,16175859983.65,20,True
+NVDA,SimpleExpSmoothing,100.0,25033648573.36,20,False
+NVDA,LinearTrend,39.48,16175859983.65,20,False
+WMT,Naive,5.35,9798153088.72,20,False
+WMT,SimpleExpSmoothing,4.5,8724751344.23,20,False
+WMT,LinearTrend,3.83,7073261471.12,20,True

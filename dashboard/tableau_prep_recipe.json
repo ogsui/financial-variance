@@ -1,0 +1,58 @@
+{
+  "description": "Tableau Prep Flow Configuration for Multi-Source Financial & Market Data Reconciliation",
+  "flowName": "Financial_Variance_Reconciliation_Flow",
+  "version": "1.0",
+  "author": "Ojas Gupta",
+  "nodes": [
+    {
+      "nodeId": "1_Input_SEC_EDGAR",
+      "stepType": "Input",
+      "sourceFile": "data/raw/financials_raw.csv",
+      "fields": ["ticker", "period_end_date", "revenue", "net_income", "opex", "calendar_frame", "fp", "fy"],
+      "operations": [
+        {"action": "ChangeType", "field": "period_end_date", "type": "Date"},
+        {"action": "FilterRows", "condition": "[period_end_date] >= #2019-01-01#"}
+      ]
+    },
+    {
+      "nodeId": "2_Input_Yahoo_Finance",
+      "stepType": "Input",
+      "sourceFile": "data/raw/prices_raw.csv",
+      "fields": ["ticker", "date", "Close", "Adj Close", "Volume"],
+      "operations": [
+        {"action": "ChangeType", "field": "date", "type": "Date"},
+        {"action": "RenameField", "from": "Close", "to": "stock_price"}
+      ]
+    },
+    {
+      "nodeId": "3_Reconcile_Join",
+      "stepType": "Fuzzy_Join",
+      "leftNode": "1_Input_SEC_EDGAR",
+      "rightNode": "2_Input_Yahoo_Finance",
+      "joinCriteria": [
+        {"left": "ticker", "right": "ticker", "matchType": "Exact"},
+        {"left": "period_end_date", "right": "date", "matchType": "NearestDate", "toleranceDays": 5}
+      ]
+    },
+    {
+      "nodeId": "4_Clean_Calculations",
+      "stepType": "Clean",
+      "calculatedFields": [
+        {
+          "name": "variance_pct",
+          "formula": "([actual_revenue] - [forecast_revenue]) / [forecast_revenue]"
+        },
+        {
+          "name": "anomaly_marker_shape",
+          "formula": "IF [anomaly_tier] = 'HIGH_CONFIDENCE_ANOMALY' THEN 'Cross' ELSEIF [anomaly_tier] = 'WORTH_A_LOOK' THEN 'Triangle' ELSE 'Circle' END"
+        }
+      ]
+    },
+    {
+      "nodeId": "5_Output_Tableau_Hyper",
+      "stepType": "Output",
+      "targetFile": "dashboard/dashboard_unified_feed.hyper",
+      "outputFormat": "TableauDataExtractHyper"
+    }
+  ]
+}

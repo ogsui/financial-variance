@@ -1,0 +1,50 @@
+{
+  "overall_summary": {
+    "total_rows": 140,
+    "total_matched": 140,
+    "overall_match_rate_pct": 100.0,
+    "max_tolerance_window_days": 5
+  },
+  "by_company": {
+    "AAPL": {
+      "total_financial_periods": 28,
+      "matched_periods": 28,
+      "unmatched_periods": 0,
+      "match_rate_pct": 100.0,
+      "avg_offset_calendar_days": 1.11,
+      "fiscal_calendar_type": "Non-Calendar Fiscal Year (Month 9)"
+    },
+    "MSFT": {
+      "total_financial_periods": 28,
+      "matched_periods": 28,
+      "unmatched_periods": 0,
+      "match_rate_pct": 100.0,
+      "avg_offset_calendar_days": 0.29,
+      "fiscal_calendar_type": "Non-Calendar Fiscal Year (Month 6)"
+    },
+    "AMZN": {
+      "total_financial_periods": 28,
+      "matched_periods": 28,
+      "unmatched_periods": 0,
+      "match_rate_pct": 100.0,
+      "avg_offset_calendar_days": 0.29,
+      "fiscal_calendar_type": "Calendar-Year Aligned (Dec)"
+    },
+    "NVDA": {
+      "total_financial_periods": 28,
+      "matched_periods": 28,
+      "unmatched_periods": 0,
+      "match_rate_pct": 100.0,
+      "avg_offset_calendar_days": 1.0,
+      "fiscal_calendar_type": "Non-Calendar Fiscal Year (Month 1)"
+    },
+    "WMT": {
+      "total_financial_periods": 28,
+      "matched_periods": 28,
+      "unmatched_periods": 0,
+      "match_rate_pct": 100.0,
+      "avg_offset_calendar_days": 0.25,
+      "fiscal_calendar_type": "Non-Calendar Fiscal Year (Month 1)"
+    }
+  }
+}

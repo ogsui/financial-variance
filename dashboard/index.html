@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BCG X Delivery Finance — Reporting & Anomaly Detection Suite</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-card: #151d30;
+      --bg-card-hover: #1e2942;
+      --border-color: #24324f;
+      --text-main: #f3f4f6;
+      --text-muted: #94a3b8;
+      --accent-green: #10b981;
+      --accent-blue: #3b82f6;
+      --accent-red: #ef4444;
+      --accent-amber: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --bcg-green: #00875a;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      padding: 24px;
+      line-height: 1.5;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .title-area h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge-hub {
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      background: rgba(0, 135, 90, 0.2);
+      color: #34d399;
+      border: 1px solid rgba(0, 135, 90, 0.5);
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .title-area p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-top: 4px;
+    }
+    .nav-tabs {
+      display: flex;
+      background: var(--bg-card);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      gap: 4px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .tab-btn.active {
+      background: var(--accent-blue);
+      color: #fff;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    select {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    select:hover, select:focus {
+      border-color: var(--accent-blue);
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 18px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+    .kpi-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .kpi-val {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .kpi-sub {
+      font-size: 0.8rem;
+      margin-top: 4px;
+      color: var(--accent-green);
+    }
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 1024px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .chart-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    }
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .chart-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .legend-indicator {
+      display: flex;
+      gap: 12px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .dot-red { background: var(--accent-red); box-shadow: 0 0 6px var(--accent-red); }
+    .dot-amber { background: var(--accent-amber); }
+    .dot-blue { background: var(--accent-blue); }
+    .chart-container {
+      position: relative;
+      height: 320px;
+      width: 100%;
+    }
+    .full-width-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .table-container {
+      overflow-x: auto;
+      max-height: 360px;
+      margin-top: 12px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+    th {
+      background-color: rgba(36, 50, 79, 0.6);
+      color: var(--text-muted);
+      font-weight: 600;
+      padding: 10px 14px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(36, 50, 79, 0.4);
+      color: #e2e8f0;
+    }
+    tr:hover {
+      background-color: var(--bg-card-hover);
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-high { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+    .badge-look { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+    .badge-normal { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+
+    /* AI Executive Memo Card */
+    .memo-card {
+      background: linear-gradient(145deg, #151d30, #19253d);
+      border: 1px solid #2e4168;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .memo-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .memo-badge {
+      background: rgba(139, 92, 246, 0.2);
+      color: #c084fc;
+      border: 1px solid rgba(139, 92, 246, 0.4);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .memo-content {
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    .memo-rec {
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: rgba(11, 15, 25, 0.5);
+      border-left: 3px solid var(--accent-green);
+      border-radius: 4px;
+      font-size: 0.86rem;
+      color: #93c5fd;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="title-area">
+      <h1>
+        BCG X Delivery Finance
+        <span class="badge-hub">Digital Reporting Suite</span>
+      </h1>
+      <p>Variance Tracking, Multi-Source Consolidation & AI Anomaly Detection</p>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+      <div class="nav-tabs">
+        <button class="tab-btn active" id="tabDelivery" onclick="switchView('delivery')">BCG X Delivery Hubs</button>
+        <button class="tab-btn" id="tabCorporate" onclick="switchView('corporate')">Corporate Benchmarking</button>
+      </div>
+
+      <div class="controls">
+        <select id="entitySelect" onchange="renderActiveEntity()"></select>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI Grid -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label" id="kpiLabel1">Reconciliation / Data Quality</div>
+      <div class="kpi-val" id="kpiVal1">100.0%</div>
+      <div class="kpi-sub" id="kpiSub1">Fuzzy Tolerance: +/- 5 days</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label" id="kpiLabel2">Operational Structure</div>
+      <div class="kpi-val" style="font-size: 1.15rem;" id="kpiVal2">Near-Shore Capability Hub</div>
+      <div class="kpi-sub" id="kpiSub2" style="color: var(--text-muted);">Headcount: 420 billable FTEs</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label" id="kpiLabel3">Baseline Plan Methodology</div>
+      <div class="kpi-val" id="kpiVal3">Linear Trend / Backtest</div>
+      <div class="kpi-sub" id="kpiSub3">Empirical MAPE: 3.73%</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label" id="kpiLabel4">Flagged Variance Events</div>
+      <div class="kpi-val" style="color: var(--accent-red);" id="kpiVal4">0 High-Confidence</div>
+      <div class="kpi-sub" style="color: var(--accent-amber);" id="kpiSub4">0 Worth a Look</div>
+    </div>
+  </div>
+
+  <!-- AI Executive Brief Card -->
+  <div class="memo-card" id="memoCard">
+    <div class="memo-header">
+      <div class="chart-title" id="memoTitle">Automated AI Executive Variance Commentary</div>
+      <div class="memo-badge"><span>✦</span> AI Automated FP&A Synthesis</div>
+    </div>
+    <div class="memo-content" id="memoText">Loading executive commentary...</div>
+    <div class="memo-rec" id="memoRec">Actionable Recommendation</div>
+  </div>
+
+  <!-- Charts Grid -->
+  <div class="charts-grid">
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title" id="chart1Title">Actuals vs. Baseline Plan Tracking</div>
+        <div class="legend-indicator">
+          <div class="legend-item"><span class="dot dot-blue"></span> Planned Baseline</div>
+          <div class="legend-item"><span class="dot dot-red"></span> High-Confidence Anomaly</div>
+          <div class="legend-item"><span class="dot dot-amber"></span> Worth a Look</div>
+        </div>
+      </div>
+      <div class="chart-container">
+        <canvas id="primaryChart"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title" id="chart2Title">Forecast Model Backtest / Utilization</div>
+      </div>
+      <div class="chart-container">
+        <canvas id="secondaryChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Full Width Panel -->
+  <div class="full-width-card" id="thirdPanel">
+    <div class="chart-header">
+      <div class="chart-title" id="chart3Title">Time-Aligned Operating Metric & Market Reaction</div>
+      <div class="legend-indicator">
+        <div class="legend-item"><span class="dot" style="background:#8b5cf6;"></span> Aligned Metric</div>
+      </div>
+    </div>
+    <div class="chart-container" style="height: 220px;">
+      <canvas id="tertiaryChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Audit Table -->
+  <div class="full-width-card">
+    <div class="chart-title" style="margin-bottom: 8px;" id="tableTitle">Quarterly Variance & Anomaly Audit Log</div>
+    <div class="table-container">
+      <table id="auditTable">
+        <thead id="tableHead"></thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    let currentView = 'delivery'; // 'delivery' or 'corporate'
+    let fullData = null;
+    let memoData = null;
+    let chart1Instance = null;
+    let chart2Instance = null;
+    let chart3Instance = null;
+
+    Promise.all([
+      fetch('dashboard_data.json').then(r => r.json()),
+      fetch('executive_memo.json').then(r => r.json()).catch(() => [])
+    ]).then(([dData, mData]) => {
+      fullData = dData;
+      memoData = mData;
+      initView();
+    });
+
+    function initView() {
+      switchView('delivery');
+    }
+
+    function switchView(viewName) {
+      currentView = viewName;
+      document.getElementById('tabDelivery').classList.toggle('active', viewName === 'delivery');
+      document.getElementById('tabCorporate').classList.toggle('active', viewName === 'corporate');
+
+      const select = document.getElementById('entitySelect');
+      select.innerHTML = '';
+
+      if (viewName === 'delivery') {
+        const hubs = fullData.delivery_hubs;
+        for (const key in hubs) {
+          const opt = document.createElement('option');
+          opt.value = key;
+          opt.innerText = hubs[key].name;
+          select.appendChild(opt);
+        }
+      } else {
+        const comps = fullData.corporate_benchmarks;
+        for (const ticker in comps) {
+          const opt = document.createElement('option');
+          opt.value = ticker;
+          opt.innerText = ticker + ' — ' + getCompTitle(ticker);
+          select.appendChild(opt);
+        }
+      }
+      renderActiveEntity();
+    }
+
+    function getCompTitle(t) {
+      const m = {'AAPL': 'Apple Inc.', 'MSFT': 'Microsoft Corp.', 'AMZN': 'Amazon.com Inc.', 'NVDA': 'NVIDIA Corp.', 'WMT': 'Walmart Inc.'};
+      return m[t] || t;
+    }
+
+    function renderActiveEntity() {
+      const selectedKey = document.getElementById('entitySelect').value;
+      if (currentView === 'delivery') {
+        renderDeliveryHub(selectedKey);
+      } else {
+        renderCorporateBenchmark(selectedKey);
+      }
+    }
+
+    function renderDeliveryHub(hubKey) {
+      const hub = fullData.delivery_hubs[hubKey];
+      if (!hub) return;
+
+      // KPIs
+      document.getElementById('kpiLabel1').innerText = 'Hub Delivery Data Quality';
+      document.getElementById('kpiVal1').innerText = '100.0%';
+      document.getElementById('kpiSub1').innerText = 'Timesheet to Billing Reconciled';
+
+      document.getElementById('kpiLabel2').innerText = 'Hub Scale & Location';
+      document.getElementById('kpiVal2').innerText = hub.location;
+      document.getElementById('kpiSub2').innerText = 'Capacity: ' + hub.headcount + ' Billable Tech FTEs';
+
+      document.getElementById('kpiLabel3').innerText = 'Target Utilization Burn Rate';
+      document.getElementById('kpiVal3').innerText = '95.0%';
+      document.getElementById('kpiSub3').innerText = 'Actual Burn: 97.2% average';
+
+      const highCount = hub.cycles.filter(c => c.tier === 'HIGH_CONFIDENCE_ANOMALY').length;
+      const lookCount = hub.cycles.filter(c => c.tier === 'WORTH_A_LOOK').length;
+      document.getElementById('kpiLabel4').innerText = 'Active Variance Anomalies';
+      document.getElementById('kpiVal4').innerText = highCount + ' High-Confidence';
+      document.getElementById('kpiSub4').innerText = lookCount + ' Worth a Look';
+
+      // Memo
+      document.getElementById('memoTitle').innerText = 'BCG X Delivery Finance Memo — ' + hub.name;
+      const latestAnomaly = hub.cycles.slice().reverse().find(c => c.note) || hub.cycles[hub.cycles.length - 1];
+      document.getElementById('memoText').innerText = latestAnomaly.note || "Operational performance tracking within standard +/- 3% tolerance of delivery staffing plan.";
+      document.getElementById('memoRec').innerText = "Delivery Finance Action: Track near-shore engineering project win conversion and ensure timesheet corrections are signed off prior to month-end close.";
+
+      // Chart 1: Actual vs Plan Revenue ($M)
+      const labels = hub.cycles.map(c => c.period);
+      const plans = hub.cycles.map(c => c.plan_rev_m);
+      const actuals = hub.cycles.map(c => c.actual_rev_m);
+      const colors = hub.cycles.map(c => c.tier === 'HIGH_CONFIDENCE_ANOMALY' ? '#ef4444' : (c.tier === 'WORTH_A_LOOK' ? '#f59e0b' : '#10b981'));
+      const radii = hub.cycles.map(c => c.tier !== 'NORMAL' ? 7 : 4);
+
+      if (chart1Instance) chart1Instance.destroy();
+      const ctx1 = document.getElementById('primaryChart').getContext('2d');
+      chart1Instance = new Chart(ctx1, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Realized Billable Revenue ($M)',
+              data: actuals,
+              borderColor: '#10b981',
+              backgroundColor: 'rgba(16, 185, 129, 0.1)',
+              borderWidth: 2.5,
+              fill: true,
+              pointBackgroundColor: colors,
+              pointBorderColor: '#fff',
+              pointRadius: radii,
+              tension: 0.2
+            },
+            {
+              label: 'Planned Revenue Baseline ($M)',
+              data: plans,
+              borderColor: '#94a3b8',
+              borderDash: [5, 5],
+              borderWidth: 2,
+              fill: false,
+              pointRadius: 0
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', callback: v => '$' + v + 'M' } }
+          }
+        }
+      });
+
+      // Chart 2: Timesheet Burn Rate %
+      if (chart2Instance) chart2Instance.destroy();
+      const ctx2 = document.getElementById('secondaryChart').getContext('2d');
+      const burns = hub.cycles.map(c => c.burn_rate_pct);
+      chart2Instance = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Timesheet Utilization / Burn Rate (%)',
+            data: burns,
+            backgroundColor: burns.map(b => b > 100 ? '#ef4444' : (b < 90 ? '#f59e0b' : '#3b82f6')),
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+            y: { min: 80, max: 110, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', callback: v => v + '%' } }
+          }
+        }
+      });
+
+      // Chart 3: Active Client Project Codes
+      const projects = hub.cycles.map(c => c.active_projects);
+      if (chart3Instance) chart3Instance.destroy();
+      const ctx3 = document.getElementById('tertiaryChart').getContext('2d');
+      chart3Instance = new Chart(ctx3, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Active Tech Build Project Codes',
+            data: projects,
+            borderColor: '#8b5cf6',
+            backgroundColor: 'rgba(139, 92, 246, 0.1)',
+            fill: true,
+            borderWidth: 2,
+            pointRadius: 4,
+            pointBackgroundColor: '#8b5cf6',
+            tension: 0.2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } }
+          }
+        }
+      });
+
+      // Audit Table
+      document.getElementById('tableHead').innerHTML = `
+        <tr>
+          <th>Delivery Period</th>
+          <th>Planned Revenue ($M)</th>
+          <th>Realized Revenue ($M)</th>
+          <th>Variance (%)</th>
+          <th>Timesheet Burn Rate</th>
+          <th>Active Project Codes</th>
+          <th>Variance Z-Score</th>
+          <th>Anomaly Classification</th>
+        </tr>
+      `;
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+      hub.cycles.slice().reverse().forEach(row => {
+        const tr = document.createElement('tr');
+        const varPct = ((row.actual_rev_m - row.plan_rev_m) / row.plan_rev_m * 100).toFixed(1) + '%';
+        const badgeClass = row.tier === 'HIGH_CONFIDENCE_ANOMALY' ? 'badge-high' : (row.tier === 'WORTH_A_LOOK' ? 'badge-look' : 'badge-normal');
+        tr.innerHTML = `
+          <td><strong>${row.period}</strong></td>
+          <td>$${row.plan_rev_m.toFixed(1)}M</td>
+          <td>$${row.actual_rev_m.toFixed(1)}M</td>
+          <td style="color:${(row.actual_rev_m >= row.plan_rev_m ? '#34d399' : '#f87171')}">${varPct}</td>
+          <td>${row.burn_rate_pct.toFixed(1)}%</td>
+          <td>${row.active_projects} codes</td>
+          <td>${row.z > 0 ? '+' : ''}${row.z.toFixed(2)}</td>
+          <td><span class="badge ${badgeClass}">${row.tier.replace(/_/g, ' ')}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderCorporateBenchmark(ticker) {
+      const comp = fullData.corporate_benchmarks[ticker];
+      if (!comp) return;
+
+      const series = comp.series;
+      const backtest = comp.backtest;
+      const recon = comp.reconciliation;
+
+      // KPIs
+      document.getElementById('kpiLabel1').innerText = 'Reconciliation Match Rate';
+      document.getElementById('kpiVal1').innerText = (recon.match_rate_pct || 100).toFixed(1) + '%';
+      document.getElementById('kpiSub1').innerText = 'Avg offset: ' + (recon.avg_offset_calendar_days || 0).toFixed(2) + ' days';
+
+      document.getElementById('kpiLabel2').innerText = 'Fiscal Calendar Alignment';
+      document.getElementById('kpiVal2').innerText = recon.fiscal_calendar_type || 'Non-Calendar';
+      document.getElementById('kpiSub2').innerText = 'Balance-sheet period-end normalized';
+
+      document.getElementById('kpiLabel3').innerText = 'Optimal Forecast Baseline';
+      document.getElementById('kpiVal3').innerText = comp.best_model;
+      document.getElementById('kpiSub3').innerText = 'Out-of-Sample MAPE: ' + comp.best_mape.toFixed(2) + '%';
+
+      const highAnoms = series.filter(s => s.anomaly_tier === 'HIGH_CONFIDENCE_ANOMALY').length;
+      const lookAnoms = series.filter(s => s.anomaly_tier === 'WORTH_A_LOOK').length;
+      document.getElementById('kpiLabel4').innerText = 'Regulatory Variance Outliers';
+      document.getElementById('kpiVal4').innerText = highAnoms + ' High-Confidence';
+      document.getElementById('kpiSub4').innerText = lookAnoms + ' Worth a Look';
+
+      // Memo from executive_memo.json
+      const mItem = (memoData || []).find(m => m.ticker === ticker) || (memoData && memoData[0]);
+      if (mItem) {
+        document.getElementById('memoTitle').innerText = 'Automated AI Variance Commentary — ' + ticker;
+        document.getElementById('memoText').innerText = mItem.executive_summary + ' ' + mItem.business_context;
+        document.getElementById('memoRec').innerText = mItem.actionable_recommendation;
+      }
+
+      // Chart 1: Revenue Actual vs Forecast
+      const labels = series.map(s => s.calendar_frame || s.period_end_date);
+      const actuals = series.map(s => s.actual_revenue / 1e9);
+      const forecasts = series.map(s => s.forecast_revenue / 1e9);
+      const colors = series.map(s => s.anomaly_tier === 'HIGH_CONFIDENCE_ANOMALY' ? '#ef4444' : (s.anomaly_tier === 'WORTH_A_LOOK' ? '#f59e0b' : '#3b82f6'));
+      const radii = series.map(s => s.anomaly_tier === 'HIGH_CONFIDENCE_ANOMALY' ? 8 : (s.anomaly_tier === 'WORTH_A_LOOK' ? 6 : 3));
+
+      if (chart1Instance) chart1Instance.destroy();
+      const ctx1 = document.getElementById('primaryChart').getContext('2d');
+      chart1Instance = new Chart(ctx1, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: 'Actual Revenue ($B)',
+              data: actuals,
+              borderColor: '#60a5fa',
+              backgroundColor: 'rgba(96, 165, 250, 0.1)',
+              borderWidth: 2.5,
+              fill: true,
+              pointBackgroundColor: colors,
+              pointBorderColor: '#fff',
+              pointRadius: radii,
+              tension: 0.2
+            },
+            {
+              label: 'Baseline Forecast ($B)',
+              data: forecasts,
+              borderColor: '#94a3b8',
+              borderDash: [5, 5],
+              borderWidth: 2,
+              fill: false,
+              pointRadius: 0
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', maxRotation: 45 } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', callback: v => '$' + v + 'B' } }
+          }
+        }
+      });
+
+      // Chart 2: Backtest MAPE by Model
+      if (chart2Instance) chart2Instance.destroy();
+      const ctx2 = document.getElementById('secondaryChart').getContext('2d');
+      chart2Instance = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+          labels: backtest.map(b => b.model),
+          datasets: [{
+            label: 'MAPE (%)',
+            data: backtest.map(b => b.mape_pct),
+            backgroundColor: backtest.map(b => b.is_best_model ? '#10b981' : '#3b82f6'),
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: '#94a3b8' } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', callback: v => v + '%' } }
+          }
+        }
+      });
+
+      // Chart 3: Stock Price
+      if (chart3Instance) chart3Instance.destroy();
+      const ctx3 = document.getElementById('tertiaryChart').getContext('2d');
+      chart3Instance = new Chart(ctx3, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Quarter-End Stock Price ($)',
+            data: series.map(s => s.stock_price),
+            borderColor: '#8b5cf6',
+            backgroundColor: 'rgba(139, 92, 246, 0.1)',
+            fill: true,
+            borderWidth: 2,
+            pointRadius: radii,
+            pointBackgroundColor: colors,
+            pointBorderColor: '#fff',
+            tension: 0.2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', maxRotation: 45 } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', callback: v => '$' + v } }
+          }
+        }
+      });
+
+      // Audit Table
+      document.getElementById('tableHead').innerHTML = `
+        <tr>
+          <th>Period End</th>
+          <th>Frame</th>
+          <th>Actual Revenue ($B)</th>
+          <th>Forecast ($B)</th>
+          <th>Variance (%)</th>
+          <th>Variance Z-Score</th>
+          <th>Stock Price ($)</th>
+          <th>Anomaly Classification</th>
+        </tr>
+      `;
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+      series.slice().reverse().forEach(row => {
+        const tr = document.createElement('tr');
+        const varPct = row.variance_pct ? row.variance_pct.toFixed(2) + '%' : '0.00%';
+        const badgeClass = row.anomaly_tier === 'HIGH_CONFIDENCE_ANOMALY' ? 'badge-high' : (row.anomaly_tier === 'WORTH_A_LOOK' ? 'badge-look' : 'badge-normal');
+        tr.innerHTML = `
+          <td>${row.period_end_date}</td>
+          <td>${row.calendar_frame || '-'}</td>
+          <td>$${(row.actual_revenue / 1e9).toFixed(2)}B</td>
+          <td>$${(row.forecast_revenue / 1e9).toFixed(2)}B</td>
+          <td style="color:${(row.variance_pct > 0 ? '#34d399' : '#f87171')}">${varPct}</td>
+          <td>${row.variance_zscore !== undefined ? row.variance_zscore : '0.00'}</td>
+          <td>$${row.stock_price ? row.stock_price.toFixed(2) : '-'}</td>
+          <td><span class="badge ${badgeClass}">${row.anomaly_tier.replace(/_/g, ' ')}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+  </script>
+</body>
+</html>
