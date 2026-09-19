@@ -1,50 +1,55 @@
 {
   "overall_summary": {
-    "total_rows": 140,
-    "total_matched": 140,
+    "total_rows": 149,
+    "total_matched": 149,
     "overall_match_rate_pct": 100.0,
     "max_tolerance_window_days": 5
   },
   "by_company": {
     "AAPL": {
-      "total_financial_periods": 28,
-      "matched_periods": 28,
+      "total_financial_periods": 30,
+      "matched_periods": 30,
       "unmatched_periods": 0,
+      "dropped_invalid_revenue": 0,
       "match_rate_pct": 100.0,
-      "avg_offset_calendar_days": 1.11,
-      "fiscal_calendar_type": "Non-Calendar Fiscal Year (Month 9)"
+      "avg_offset_calendar_days": 1.1,
+      "fiscal_calendar_type": "Fiscal year end month 9"
     },
     "MSFT": {
-      "total_financial_periods": 28,
-      "matched_periods": 28,
+      "total_financial_periods": 30,
+      "matched_periods": 30,
       "unmatched_periods": 0,
+      "dropped_invalid_revenue": 0,
       "match_rate_pct": 100.0,
-      "avg_offset_calendar_days": 0.29,
-      "fiscal_calendar_type": "Non-Calendar Fiscal Year (Month 6)"
+      "avg_offset_calendar_days": 0.27,
+      "fiscal_calendar_type": "Fiscal year end month 6"
     },
     "AMZN": {
-      "total_financial_periods": 28,
-      "matched_periods": 28,
+      "total_financial_periods": 30,
+      "matched_periods": 30,
       "unmatched_periods": 0,
+      "dropped_invalid_revenue": 0,
       "match_rate_pct": 100.0,
-      "avg_offset_calendar_days": 0.29,
-      "fiscal_calendar_type": "Calendar-Year Aligned (Dec)"
+      "avg_offset_calendar_days": 0.27,
+      "fiscal_calendar_type": "Calendar year (Dec)"
     },
     "NVDA": {
       "total_financial_periods": 28,
       "matched_periods": 28,
       "unmatched_periods": 0,
+      "dropped_invalid_revenue": 0,
       "match_rate_pct": 100.0,
       "avg_offset_calendar_days": 1.0,
-      "fiscal_calendar_type": "Non-Calendar Fiscal Year (Month 1)"
+      "fiscal_calendar_type": "Fiscal year end month 1"
     },
     "WMT": {
-      "total_financial_periods": 28,
-      "matched_periods": 28,
+      "total_financial_periods": 31,
+      "matched_periods": 31,
       "unmatched_periods": 0,
+      "dropped_invalid_revenue": 0,
       "match_rate_pct": 100.0,
-      "avg_offset_calendar_days": 0.25,
-      "fiscal_calendar_type": "Non-Calendar Fiscal Year (Month 1)"
+      "avg_offset_calendar_days": 0.26,
+      "fiscal_calendar_type": "Fiscal year end month 1"
     }
   }
 }
