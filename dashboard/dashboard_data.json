@@ -5,7 +5,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2019-03-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
           "fiscal_period": "Q2",
           "actual_revenue": 58015000000.0,
@@ -28,7 +28,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2019-06-29",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
           "fiscal_period": "Q3",
           "actual_revenue": 53809000000.0,
@@ -51,9 +51,9 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2019-09-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
-          "fiscal_period": "FY",
+          "fiscal_period": "Q4",
           "actual_revenue": 64040000000.0,
           "forecast_revenue": 64040000000.0,
           "variance": 0.0,
@@ -74,7 +74,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2019-12-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q1",
           "actual_revenue": 91819000000.0,
@@ -97,7 +97,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2020-03-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q2",
           "actual_revenue": 58313000000.0,
@@ -120,7 +120,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2020-06-27",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q3",
           "actual_revenue": 59685000000.0,
@@ -143,7 +143,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2020-09-26",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q4",
           "actual_revenue": 64698000000.0,
@@ -166,7 +166,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2020-12-26",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q1",
           "actual_revenue": 111439000000.0,
@@ -189,7 +189,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2021-03-27",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q2",
           "actual_revenue": 89584000000.0,
@@ -212,7 +212,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2021-06-26",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q3",
           "actual_revenue": 81434000000.0,
@@ -235,7 +235,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2021-09-25",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q4",
           "actual_revenue": 83360000000.0,
@@ -258,7 +258,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2021-12-25",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q1",
           "actual_revenue": 123945000000.0,
@@ -281,7 +281,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2022-03-26",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q2",
           "actual_revenue": 97278000000.0,
@@ -304,7 +304,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2022-06-25",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q3",
           "actual_revenue": 82959000000.0,
@@ -327,7 +327,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2022-09-24",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q4",
           "actual_revenue": 90146000000.0,
@@ -350,7 +350,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2022-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q1",
           "actual_revenue": 117154000000.0,
@@ -373,7 +373,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2023-04-01",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q2",
           "actual_revenue": 94836000000.0,
@@ -396,7 +396,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2023-07-01",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q3",
           "actual_revenue": 81797000000.0,
@@ -419,7 +419,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2023-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q4",
           "actual_revenue": 89498000000.0,
@@ -442,7 +442,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2023-12-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q1",
           "actual_revenue": 119575000000.0,
@@ -465,7 +465,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2024-03-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q2",
           "actual_revenue": 90753000000.0,
@@ -488,7 +488,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2024-06-29",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q3",
           "actual_revenue": 85777000000.0,
@@ -511,7 +511,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2024-09-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q4",
           "actual_revenue": 94930000000.0,
@@ -534,7 +534,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2024-12-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q1",
           "actual_revenue": 124300000000.0,
@@ -557,7 +557,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2025-03-29",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q2",
           "actual_revenue": 95359000000.0,
@@ -580,7 +580,7 @@
         {
           "ticker": "AAPL",
           "period_end_date": "2025-06-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q3",
           "actual_revenue": 94036000000.0,
@@ -736,7 +736,7 @@
         {
           "ticker": "MSFT",
           "period_end_date": "2019-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
           "fiscal_period": "Q3",
           "actual_revenue": 30571000000.0,
@@ -753,15 +753,15 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 8809000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 22789100.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2019-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
-          "fiscal_period": "FY",
+          "fiscal_period": "Q4",
           "actual_revenue": 33717000000.0,
           "forecast_revenue": 33717000000.0,
           "variance": 0.0,
@@ -776,13 +776,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 13187000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 22613500.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2019-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q1",
           "actual_revenue": 33055000000.0,
@@ -799,13 +799,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 10678000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 17280900.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2019-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q2",
           "actual_revenue": 36906000000.0,
@@ -822,13 +822,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 11649000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 18369400.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2020-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q3",
           "actual_revenue": 35021000000.0,
@@ -845,13 +845,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 10752000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 77927200.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2020-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q4",
           "actual_revenue": 38033000000.0,
@@ -868,13 +868,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 11202000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 34310300.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2020-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q1",
           "actual_revenue": 37154000000.0,
@@ -891,13 +891,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 13893000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 33829100.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2020-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q2",
           "actual_revenue": 43076000000.0,
@@ -914,13 +914,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 15463000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 20942100.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2021-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q3",
           "actual_revenue": 41706000000.0,
@@ -937,13 +937,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 15457000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 43623500.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2021-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q4",
           "actual_revenue": 46152000000.0,
@@ -960,13 +960,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 16458000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 21656500.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2021-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q1",
           "actual_revenue": 45317000000.0,
@@ -983,13 +983,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 20505000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 32343600.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2021-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q2",
           "actual_revenue": 51728000000.0,
@@ -1006,13 +1006,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 18765000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 18000800.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2022-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q3",
           "actual_revenue": 49360000000.0,
@@ -1029,13 +1029,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 16728000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 33422100.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2022-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q4",
           "actual_revenue": 51865000000.0,
@@ -1052,13 +1052,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 16740000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 31730900.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2022-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q1",
           "actual_revenue": 50122000000.0,
@@ -1075,13 +1075,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 17556000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 35694800.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2022-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q2",
           "actual_revenue": 52747000000.0,
@@ -1098,13 +1098,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 16425000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 21938500.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2023-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q3",
           "actual_revenue": 52857000000.0,
@@ -1121,13 +1121,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 18299000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 32766000.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2023-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q4",
           "actual_revenue": 56189000000.0,
@@ -1144,13 +1144,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 20081000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 26832800.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2023-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q1",
           "actual_revenue": 56517000000.0,
@@ -1167,13 +1167,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 22291000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 24147300.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2023-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q2",
           "actual_revenue": 62020000000.0,
@@ -1190,13 +1190,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 21870000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 18730800.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2024-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q3",
           "actual_revenue": 61858000000.0,
@@ -1213,13 +1213,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 21939000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 16316000.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2024-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q4",
           "actual_revenue": 64727000000.0,
@@ -1236,13 +1236,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 22036000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 17662800.0
         },
         {
           "ticker": "MSFT",
           "period_end_date": "2024-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q1",
           "actual_revenue": 65585000000.0,
@@ -1265,7 +1265,7 @@
         {
           "ticker": "MSFT",
           "period_end_date": "2024-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q2",
           "actual_revenue": 69632000000.0,
@@ -1288,7 +1288,7 @@
         {
           "ticker": "MSFT",
           "period_end_date": "2025-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q3",
           "actual_revenue": 70066000000.0,
@@ -1311,7 +1311,7 @@
         {
           "ticker": "MSFT",
           "period_end_date": "2025-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q4",
           "actual_revenue": 76441000000.0,
@@ -1328,7 +1328,7 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 27233000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 28369000.0
         },
         {
@@ -1467,7 +1467,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2019-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
           "fiscal_period": "Q1",
           "actual_revenue": 59700000000.0,
@@ -1490,7 +1490,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2019-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
           "fiscal_period": "Q2",
           "actual_revenue": 63404000000.0,
@@ -1513,7 +1513,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2019-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
           "fiscal_period": "Q3",
           "actual_revenue": 69981000000.0,
@@ -1536,9 +1536,9 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2019-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
-          "fiscal_period": "FY",
+          "fiscal_period": "Q4",
           "actual_revenue": 87437000000.0,
           "forecast_revenue": 87437000000.0,
           "variance": 0.0,
@@ -1559,7 +1559,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2020-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q1",
           "actual_revenue": 75452000000.0,
@@ -1582,7 +1582,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2020-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q2",
           "actual_revenue": 88912000000.0,
@@ -1605,7 +1605,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2020-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q3",
           "actual_revenue": 96145000000.0,
@@ -1630,7 +1630,7 @@
           "period_end_date": "2020-12-31",
           "calendar_frame": "CY2020Q4",
           "fiscal_year": 2020.0,
-          "fiscal_period": "FY",
+          "fiscal_period": "Q4",
           "actual_revenue": 125555000000.0,
           "forecast_revenue": 125555000000.0,
           "variance": 0.0,
@@ -1651,7 +1651,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2021-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q1",
           "actual_revenue": 108518000000.0,
@@ -1674,7 +1674,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2021-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q2",
           "actual_revenue": 113080000000.0,
@@ -1697,7 +1697,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2021-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q3",
           "actual_revenue": 110812000000.0,
@@ -1720,7 +1720,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2021-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q4",
           "actual_revenue": 137412000000.0,
@@ -1743,7 +1743,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2022-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q1",
           "actual_revenue": 116444000000.0,
@@ -1766,7 +1766,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2022-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q2",
           "actual_revenue": 121234000000.0,
@@ -1789,7 +1789,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2022-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q3",
           "actual_revenue": 127101000000.0,
@@ -1812,7 +1812,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2022-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q4",
           "actual_revenue": 149204000000.0,
@@ -1835,7 +1835,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2023-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q1",
           "actual_revenue": 127358000000.0,
@@ -1858,7 +1858,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2023-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q2",
           "actual_revenue": 134383000000.0,
@@ -1881,7 +1881,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2023-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q3",
           "actual_revenue": 143083000000.0,
@@ -1904,7 +1904,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2023-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q4",
           "actual_revenue": 169961000000.0,
@@ -1927,7 +1927,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2024-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q1",
           "actual_revenue": 143313000000.0,
@@ -1950,7 +1950,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2024-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q2",
           "actual_revenue": 147977000000.0,
@@ -1973,7 +1973,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2024-09-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q3",
           "actual_revenue": 158877000000.0,
@@ -1996,7 +1996,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2024-12-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q4",
           "actual_revenue": 187792000000.0,
@@ -2019,7 +2019,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2025-03-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q1",
           "actual_revenue": 155667000000.0,
@@ -2042,7 +2042,7 @@
         {
           "ticker": "AMZN",
           "period_end_date": "2025-06-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q2",
           "actual_revenue": 167702000000.0,
@@ -2198,7 +2198,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2019-04-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q1",
           "actual_revenue": 2220000000.0,
@@ -2221,7 +2221,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2019-07-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q2",
           "actual_revenue": 2579000000.0,
@@ -2244,7 +2244,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2019-10-27",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q3",
           "actual_revenue": 3014000000.0,
@@ -2267,7 +2267,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2020-04-26",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q1",
           "actual_revenue": 3080000000.0,
@@ -2290,7 +2290,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2020-07-26",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q2",
           "actual_revenue": 3866000000.0,
@@ -2313,7 +2313,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2020-10-25",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q3",
           "actual_revenue": 4726000000.0,
@@ -2336,7 +2336,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2021-05-02",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q1",
           "actual_revenue": 5661000000.0,
@@ -2359,7 +2359,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2021-08-01",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q2",
           "actual_revenue": 6507000000.0,
@@ -2382,7 +2382,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2021-10-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q3",
           "actual_revenue": 7103000000.0,
@@ -2405,7 +2405,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2022-01-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q4",
           "actual_revenue": 7643000000.0,
@@ -2428,7 +2428,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2022-05-01",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q1",
           "actual_revenue": 8288000000.0,
@@ -2451,7 +2451,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2022-07-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q2",
           "actual_revenue": 6704000000.0,
@@ -2474,7 +2474,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2022-10-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q3",
           "actual_revenue": 5931000000.0,
@@ -2497,7 +2497,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2023-01-29",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q4",
           "actual_revenue": 6051000000.0,
@@ -2520,7 +2520,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2023-04-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q1",
           "actual_revenue": 7192000000.0,
@@ -2543,7 +2543,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2023-07-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q2",
           "actual_revenue": 13507000000.0,
@@ -2566,7 +2566,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2023-10-29",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q3",
           "actual_revenue": 18120000000.0,
@@ -2589,7 +2589,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2024-01-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q4",
           "actual_revenue": 22103000000.0,
@@ -2612,7 +2612,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2024-04-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q1",
           "actual_revenue": 26044000000.0,
@@ -2635,7 +2635,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2024-07-28",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q2",
           "actual_revenue": 30040000000.0,
@@ -2658,7 +2658,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2024-10-27",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q3",
           "actual_revenue": 35082000000.0,
@@ -2681,7 +2681,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2025-01-26",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q4",
           "actual_revenue": 39331000000.0,
@@ -2704,7 +2704,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2025-04-27",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2026.0,
           "fiscal_period": "Q1",
           "actual_revenue": 44062000000.0,
@@ -2727,7 +2727,7 @@
         {
           "ticker": "NVDA",
           "period_end_date": "2025-07-27",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2026.0,
           "fiscal_period": "Q2",
           "actual_revenue": 46743000000.0,
@@ -2883,9 +2883,9 @@
         {
           "ticker": "WMT",
           "period_end_date": "2019-01-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2019.0,
-          "fiscal_period": "FY",
+          "fiscal_period": "Q4",
           "actual_revenue": 137743000000.0,
           "forecast_revenue": 137743000000.0,
           "variance": 0.0,
@@ -2900,13 +2900,13 @@
           "pelt_penalty": 10.0,
           "z_threshold": 2.0,
           "net_income": 3687000000.0,
-          "opex": NaN,
+          "opex": null,
           "volume": 44169000.0
         },
         {
           "ticker": "WMT",
           "period_end_date": "2019-04-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q1",
           "actual_revenue": 122949000000.0,
@@ -2929,7 +2929,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2019-07-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q2",
           "actual_revenue": 129388000000.0,
@@ -2952,7 +2952,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2019-10-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2020.0,
           "fiscal_period": "Q3",
           "actual_revenue": 126981000000.0,
@@ -2977,7 +2977,7 @@
           "period_end_date": "2020-01-31",
           "calendar_frame": "CY2019Q4",
           "fiscal_year": 2020.0,
-          "fiscal_period": "FY",
+          "fiscal_period": "Q4",
           "actual_revenue": 140608000000.0,
           "forecast_revenue": 140608000000.0,
           "variance": 0.0,
@@ -2998,7 +2998,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2020-04-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q1",
           "actual_revenue": 133672000000.0,
@@ -3021,7 +3021,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2020-07-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q2",
           "actual_revenue": 136824000000.0,
@@ -3044,7 +3044,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2020-10-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q3",
           "actual_revenue": 133752000000.0,
@@ -3067,7 +3067,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2021-01-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2021.0,
           "fiscal_period": "Q4",
           "actual_revenue": 150985000000.0,
@@ -3090,7 +3090,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2021-04-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q1",
           "actual_revenue": 137159000000.0,
@@ -3113,7 +3113,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2021-07-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q2",
           "actual_revenue": 139871000000.0,
@@ -3136,7 +3136,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2021-10-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q3",
           "actual_revenue": 139207000000.0,
@@ -3159,7 +3159,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2022-01-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2022.0,
           "fiscal_period": "Q4",
           "actual_revenue": 151525000000.0,
@@ -3182,7 +3182,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2022-04-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q1",
           "actual_revenue": 140288000000.0,
@@ -3205,7 +3205,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2022-07-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q2",
           "actual_revenue": 151381000000.0,
@@ -3228,7 +3228,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2022-10-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q3",
           "actual_revenue": 151469000000.0,
@@ -3251,7 +3251,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2023-01-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2023.0,
           "fiscal_period": "Q4",
           "actual_revenue": 162743000000.0,
@@ -3274,7 +3274,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2023-04-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q1",
           "actual_revenue": 151004000000.0,
@@ -3297,7 +3297,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2023-07-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q2",
           "actual_revenue": 160280000000.0,
@@ -3320,7 +3320,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2023-10-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q3",
           "actual_revenue": 159439000000.0,
@@ -3343,7 +3343,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2024-01-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2024.0,
           "fiscal_period": "Q4",
           "actual_revenue": 171914000000.0,
@@ -3366,7 +3366,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2024-04-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q1",
           "actual_revenue": 159938000000.0,
@@ -3389,7 +3389,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2024-07-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q2",
           "actual_revenue": 167767000000.0,
@@ -3412,7 +3412,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2024-10-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q3",
           "actual_revenue": 168003000000.0,
@@ -3435,7 +3435,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2025-01-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2025.0,
           "fiscal_period": "Q4",
           "actual_revenue": 178830000000.0,
@@ -3458,7 +3458,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2025-04-30",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2026.0,
           "fiscal_period": "Q1",
           "actual_revenue": 163981000000.0,
@@ -3481,7 +3481,7 @@
         {
           "ticker": "WMT",
           "period_end_date": "2025-07-31",
-          "calendar_frame": NaN,
+          "calendar_frame": null,
           "fiscal_year": 2026.0,
           "fiscal_period": "Q2",
           "actual_revenue": 175750000000.0,
@@ -3631,252 +3631,6 @@
       },
       "best_model": "LinearTrend",
       "best_mape": 3.65
-    }
-  },
-  "delivery_hubs": {
-    "X_BUILD_LATAM": {
-      "name": "LATAM Near-Shore X Build Hub",
-      "location": "Sao Paulo / Mexico City",
-      "headcount": 420,
-      "cycles": [
-        {
-          "period": "2024-Q1",
-          "plan_rev_m": 12.5,
-          "actual_rev_m": 12.8,
-          "burn_rate_pct": 96.2,
-          "active_projects": 28,
-          "z": 0.4,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2024-Q2",
-          "plan_rev_m": 14.2,
-          "actual_rev_m": 14.0,
-          "burn_rate_pct": 94.5,
-          "active_projects": 32,
-          "z": -0.3,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2024-Q3",
-          "plan_rev_m": 16.0,
-          "actual_rev_m": 19.8,
-          "burn_rate_pct": 104.2,
-          "active_projects": 39,
-          "z": 2.6,
-          "tier": "HIGH_CONFIDENCE_ANOMALY",
-          "note": "Rapid scale of near-shore engineering hub following 3 Fortune 50 enterprise digital transformation project wins."
-        },
-        {
-          "period": "2024-Q4",
-          "plan_rev_m": 18.5,
-          "actual_rev_m": 21.4,
-          "burn_rate_pct": 102.8,
-          "active_projects": 44,
-          "z": 2.1,
-          "tier": "HIGH_CONFIDENCE_ANOMALY",
-          "note": "Sustained high utilization; contractor timesheet correction resolved in Q4."
-        },
-        {
-          "period": "2025-Q1",
-          "plan_rev_m": 22.0,
-          "actual_rev_m": 22.3,
-          "burn_rate_pct": 97.4,
-          "active_projects": 48,
-          "z": 0.2,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2025-Q2",
-          "plan_rev_m": 24.5,
-          "actual_rev_m": 25.1,
-          "burn_rate_pct": 98.1,
-          "active_projects": 52,
-          "z": 0.5,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2025-Q3",
-          "plan_rev_m": 27.0,
-          "actual_rev_m": 24.2,
-          "burn_rate_pct": 88.6,
-          "active_projects": 49,
-          "z": -2.2,
-          "tier": "WORTH_A_LOOK",
-          "note": "Project completion gap before Q4 ramp-up; bench utilization dipped by 9%."
-        },
-        {
-          "period": "2025-Q4",
-          "plan_rev_m": 29.5,
-          "actual_rev_m": 30.8,
-          "burn_rate_pct": 99.4,
-          "active_projects": 58,
-          "z": 0.8,
-          "tier": "NORMAL"
-        }
-      ]
-    },
-    "X_BUILD_EMEA": {
-      "name": "EMEA Capability & Innovation Hub",
-      "location": "London / Berlin / Paris",
-      "headcount": 580,
-      "cycles": [
-        {
-          "period": "2024-Q1",
-          "plan_rev_m": 28.0,
-          "actual_rev_m": 27.6,
-          "burn_rate_pct": 93.0,
-          "active_projects": 45,
-          "z": -0.4,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2024-Q2",
-          "plan_rev_m": 30.5,
-          "actual_rev_m": 31.2,
-          "burn_rate_pct": 95.5,
-          "active_projects": 50,
-          "z": 0.6,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2024-Q3",
-          "plan_rev_m": 32.0,
-          "actual_rev_m": 31.5,
-          "burn_rate_pct": 92.1,
-          "active_projects": 51,
-          "z": -0.3,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2024-Q4",
-          "plan_rev_m": 35.0,
-          "actual_rev_m": 38.9,
-          "burn_rate_pct": 101.5,
-          "active_projects": 58,
-          "z": 2.3,
-          "tier": "HIGH_CONFIDENCE_ANOMALY",
-          "note": "Accelerated AI platform deployments for European banking consortium."
-        },
-        {
-          "period": "2025-Q1",
-          "plan_rev_m": 37.0,
-          "actual_rev_m": 36.8,
-          "burn_rate_pct": 94.2,
-          "active_projects": 60,
-          "z": -0.1,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2025-Q2",
-          "plan_rev_m": 39.5,
-          "actual_rev_m": 40.2,
-          "burn_rate_pct": 96.0,
-          "active_projects": 63,
-          "z": 0.4,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2025-Q3",
-          "plan_rev_m": 42.0,
-          "actual_rev_m": 41.6,
-          "burn_rate_pct": 93.8,
-          "active_projects": 65,
-          "z": -0.3,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2025-Q4",
-          "plan_rev_m": 45.0,
-          "actual_rev_m": 47.4,
-          "burn_rate_pct": 99.2,
-          "active_projects": 70,
-          "z": 1.4,
-          "tier": "WORTH_A_LOOK",
-          "note": "Late project extensions and year-end backlog milestone recognition."
-        }
-      ]
-    },
-    "X_BUILD_NA": {
-      "name": "North America Digital Build Hub",
-      "location": "New York / Boston / Silicon Valley",
-      "headcount": 820,
-      "cycles": [
-        {
-          "period": "2024-Q1",
-          "plan_rev_m": 52.0,
-          "actual_rev_m": 53.4,
-          "burn_rate_pct": 96.8,
-          "active_projects": 78,
-          "z": 0.7,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2024-Q2",
-          "plan_rev_m": 56.0,
-          "actual_rev_m": 55.2,
-          "burn_rate_pct": 94.1,
-          "active_projects": 82,
-          "z": -0.4,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2024-Q3",
-          "plan_rev_m": 58.5,
-          "actual_rev_m": 61.8,
-          "burn_rate_pct": 99.5,
-          "active_projects": 88,
-          "z": 1.7,
-          "tier": "WORTH_A_LOOK",
-          "note": "Healthcare tech platform build milestone pulled forward into Q3."
-        },
-        {
-          "period": "2024-Q4",
-          "plan_rev_m": 63.0,
-          "actual_rev_m": 64.1,
-          "burn_rate_pct": 97.0,
-          "active_projects": 92,
-          "z": 0.4,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2025-Q1",
-          "plan_rev_m": 66.0,
-          "actual_rev_m": 65.5,
-          "burn_rate_pct": 95.0,
-          "active_projects": 95,
-          "z": -0.2,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2025-Q2",
-          "plan_rev_m": 70.0,
-          "actual_rev_m": 72.8,
-          "burn_rate_pct": 98.6,
-          "active_projects": 102,
-          "z": 1.1,
-          "tier": "NORMAL"
-        },
-        {
-          "period": "2025-Q3",
-          "plan_rev_m": 74.0,
-          "actual_rev_m": 79.4,
-          "burn_rate_pct": 102.4,
-          "active_projects": 110,
-          "z": 2.2,
-          "tier": "HIGH_CONFIDENCE_ANOMALY",
-          "note": "Generative AI enterprise rollout across 4 concurrent client accounts."
-        },
-        {
-          "period": "2025-Q4",
-          "plan_rev_m": 80.0,
-          "actual_rev_m": 81.2,
-          "burn_rate_pct": 97.5,
-          "active_projects": 114,
-          "z": 0.4,
-          "tier": "NORMAL"
-        }
-      ]
     }
   }
 }

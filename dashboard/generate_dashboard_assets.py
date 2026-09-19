@@ -9,11 +9,25 @@ from __future__ import annotations
 
 import json
 import logging
+import math
 from pathlib import Path
 import pandas as pd
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
+
+
+def sanitize_json(obj):
+    """Recursively convert NaN/Infinity floats to None for valid JSON output."""
+    if isinstance(obj, float):
+        if math.isnan(obj) or math.isinf(obj):
+            return None
+        return obj
+    if isinstance(obj, dict):
+        return {k: sanitize_json(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [sanitize_json(v) for v in obj]
+    return obj
 
 
 def generate_assets(
@@ -45,7 +59,7 @@ def generate_assets(
     unified = pd.merge(unified, cons_subset, on=["ticker", "period_end_date"], how="left")
 
     unified_csv_path = d_dir / "dashboard_unified_feed.csv"
-    unified.to_csv(unified_csv_path, index=False)
+    unified.to_csv(unified_csv_path, index=False, na_rep="")
     logger.info(f"Saved unified dashboard dataset to {unified_csv_path.resolve()}")
 
     # Prepare JSON structure for interactive standalone web dashboard
@@ -55,12 +69,25 @@ def generate_assets(
         t_bt = df_backtest[df_backtest["ticker"] == ticker].to_dict(orient="records")
         t_rec = reconcile_data["by_company"].get(ticker, {})
 
+        best_rows = df_backtest[(df_backtest["ticker"] == ticker) & (df_backtest["is_best_model"])]
+        if best_rows.empty:
+            logger.warning(f"No best-model row found for {ticker}; skipping best_model/best_mape fields.")
+            best_model = None
+            best_mape = None
+        else:
+            if len(best_rows) > 1:
+                logger.warning(
+                    f"Multiple best-model rows found for {ticker} ({len(best_rows)}); using the first."
+                )
+            best_model = best_rows["model"].values[0]
+            best_mape = float(best_rows["mape_pct"].values[0])
+
         companies_data[ticker] = {
             "series": t_anom,
             "backtest": t_bt,
             "reconciliation": t_rec,
-            "best_model": df_backtest[(df_backtest["ticker"] == ticker) & (df_backtest["is_best_model"])]["model"].values[0],
-            "best_mape": float(df_backtest[(df_backtest["ticker"] == ticker) & (df_backtest["is_best_model"])]["mape_pct"].values[0]),
+            "best_model": best_model,
+            "best_mape": best_mape,
         }
 
     full_payload = {
@@ -69,7 +96,7 @@ def generate_assets(
 
     dashboard_json_path = d_dir / "dashboard_data.json"
     with open(dashboard_json_path, "w", encoding="utf-8") as f:
-        json.dump(full_payload, f, indent=2)
+        json.dump(sanitize_json(full_payload), f, indent=2)
     logger.info(f"Saved dashboard JSON data feed to {dashboard_json_path.resolve()}")
 
 

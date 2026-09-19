@@ -1,7 +1,7 @@
 period_end_date,revenue,form,fp,fy,filed_date,calendar_frame,tag_used_revenue,net_income,tag_used_net_income,opex,tag_used_opex,ticker,cik
 2019-03-30,58015000000.0,10-Q,Q2,2019.0,2019-05-01,,RevenueFromContractWithCustomerExcludingAssessedTax,11561000000.0,NetIncomeLoss,8406000000.0,OperatingExpenses,AAPL,0000320193
 2019-06-29,53809000000.0,10-Q,Q3,2019.0,2019-07-31,,RevenueFromContractWithCustomerExcludingAssessedTax,10044000000.0,NetIncomeLoss,8683000000.0,OperatingExpenses,AAPL,0000320193
-2019-09-28,64040000000.0,10-K,FY,2019.0,2019-10-31,,RevenueFromContractWithCustomerExcludingAssessedTax,13686000000.0,NetIncomeLoss,8688000000.0,OperatingExpenses,AAPL,0000320193
+2019-09-28,64040000000.0,10-K,Q4,2019.0,2019-10-31,,RevenueFromContractWithCustomerExcludingAssessedTax,13686000000.0,NetIncomeLoss,8688000000.0,OperatingExpenses,AAPL,0000320193
 2019-12-28,91819000000.0,10-Q,Q1,2020.0,2020-01-29,,RevenueFromContractWithCustomerExcludingAssessedTax,22236000000.0,NetIncomeLoss,9648000000.0,OperatingExpenses,AAPL,0000320193
 2020-03-28,58313000000.0,10-Q,Q2,2020.0,2020-05-01,,RevenueFromContractWithCustomerExcludingAssessedTax,11249000000.0,NetIncomeLoss,9517000000.0,OperatingExpenses,AAPL,0000320193
 2020-06-27,59685000000.0,10-Q,Q3,2020.0,2020-07-31,,RevenueFromContractWithCustomerExcludingAssessedTax,11253000000.0,NetIncomeLoss,9589000000.0,OperatingExpenses,AAPL,0000320193
@@ -30,7 +30,7 @@ period_end_date,revenue,form,fp,fy,filed_date,calendar_frame,tag_used_revenue,ne
 2026-03-28,111184000000.0,10-Q,Q2,2026.0,2026-05-01,CY2026Q1,RevenueFromContractWithCustomerExcludingAssessedTax,29578000000.0,NetIncomeLoss,18896000000.0,OperatingExpenses,AAPL,0000320193
 2026-06-27,109417000000.0,10-Q,Q3,2026.0,2026-07-31,CY2026Q2,RevenueFromContractWithCustomerExcludingAssessedTax,29789000000.0,NetIncomeLoss,19075000000.0,OperatingExpenses,AAPL,0000320193
 2019-03-31,30571000000.0,10-Q,Q3,2019.0,2019-04-24,,RevenueFromContractWithCustomerExcludingAssessedTax,8809000000.0,NetIncomeLoss,,,MSFT,0000789019
-2019-06-30,33717000000.0,10-K,FY,2019.0,2019-08-01,,RevenueFromContractWithCustomerExcludingAssessedTax,13187000000.0,NetIncomeLoss,,,MSFT,0000789019
+2019-06-30,33717000000.0,10-K,Q4,2019.0,2019-08-01,,RevenueFromContractWithCustomerExcludingAssessedTax,13187000000.0,NetIncomeLoss,,,MSFT,0000789019
 2019-09-30,33055000000.0,10-Q,Q1,2020.0,2019-10-23,,RevenueFromContractWithCustomerExcludingAssessedTax,10678000000.0,NetIncomeLoss,,,MSFT,0000789019
 2019-12-31,36906000000.0,10-Q,Q2,2020.0,2020-01-29,,RevenueFromContractWithCustomerExcludingAssessedTax,11649000000.0,NetIncomeLoss,,,MSFT,0000789019
 2020-03-31,35021000000.0,10-Q,Q3,2020.0,2020-04-29,,RevenueFromContractWithCustomerExcludingAssessedTax,10752000000.0,NetIncomeLoss,,,MSFT,0000789019
@@ -62,11 +62,11 @@ period_end_date,revenue,form,fp,fy,filed_date,calendar_frame,tag_used_revenue,ne
 2019-03-31,59700000000.0,10-Q,Q1,2019.0,2019-04-26,,RevenueFromContractWithCustomerExcludingAssessedTax,3561000000.0,NetIncomeLoss,55280000000.0,CostsAndExpenses,AMZN,0001018724
 2019-06-30,63404000000.0,10-Q,Q2,2019.0,2019-07-26,,RevenueFromContractWithCustomerExcludingAssessedTax,2625000000.0,NetIncomeLoss,60320000000.0,CostsAndExpenses,AMZN,0001018724
 2019-09-30,69981000000.0,10-Q,Q3,2019.0,2019-10-25,,RevenueFromContractWithCustomerExcludingAssessedTax,2134000000.0,NetIncomeLoss,66824000000.0,CostsAndExpenses,AMZN,0001018724
-2019-12-31,87437000000.0,10-K,FY,2019.0,2020-01-31,,RevenueFromContractWithCustomerExcludingAssessedTax,3268000000.0,NetIncomeLoss,83557000000.0,CostsAndExpenses,AMZN,0001018724
+2019-12-31,87437000000.0,10-K,Q4,2019.0,2020-01-31,,RevenueFromContractWithCustomerExcludingAssessedTax,3268000000.0,NetIncomeLoss,83557000000.0,CostsAndExpenses,AMZN,0001018724
 2020-03-31,75452000000.0,10-Q,Q1,2020.0,2020-05-01,,RevenueFromContractWithCustomerExcludingAssessedTax,2535000000.0,NetIncomeLoss,71463000000.0,CostsAndExpenses,AMZN,0001018724
 2020-06-30,88912000000.0,10-Q,Q2,2020.0,2020-07-31,,RevenueFromContractWithCustomerExcludingAssessedTax,5243000000.0,NetIncomeLoss,83069000000.0,CostsAndExpenses,AMZN,0001018724
 2020-09-30,96145000000.0,10-Q,Q3,2020.0,2020-10-30,,RevenueFromContractWithCustomerExcludingAssessedTax,6331000000.0,NetIncomeLoss,89951000000.0,CostsAndExpenses,AMZN,0001018724
-2020-12-31,125555000000.0,10-K,FY,2020.0,2021-02-03,CY2020Q4,RevenueFromContractWithCustomerExcludingAssessedTax,7222000000.0,NetIncomeLoss,118682000000.0,CostsAndExpenses,AMZN,0001018724
+2020-12-31,125555000000.0,10-K,Q4,2020.0,2021-02-03,CY2020Q4,RevenueFromContractWithCustomerExcludingAssessedTax,7222000000.0,NetIncomeLoss,118682000000.0,CostsAndExpenses,AMZN,0001018724
 2021-03-31,108518000000.0,10-Q,Q1,2021.0,2021-04-30,,RevenueFromContractWithCustomerExcludingAssessedTax,8107000000.0,NetIncomeLoss,99653000000.0,CostsAndExpenses,AMZN,0001018724
 2021-06-30,113080000000.0,10-Q,Q2,2021.0,2021-07-30,,RevenueFromContractWithCustomerExcludingAssessedTax,7778000000.0,NetIncomeLoss,105378000000.0,CostsAndExpenses,AMZN,0001018724
 2021-09-30,110812000000.0,10-Q,Q3,2021.0,2021-10-29,,RevenueFromContractWithCustomerExcludingAssessedTax,3156000000.0,NetIncomeLoss,105960000000.0,CostsAndExpenses,AMZN,0001018724
@@ -117,11 +117,11 @@ period_end_date,revenue,form,fp,fy,filed_date,calendar_frame,tag_used_revenue,ne
 2026-01-25,68127000000.0,10-K,Q4,2026.0,2026-02-25,CY2025,Revenues,42960000000.0,NetIncomeLoss,6794000000.0,OperatingExpenses,NVDA,0001045810
 2026-04-26,81615000000.0,10-Q,Q1,2027.0,2026-05-20,CY2026Q1,Revenues,58321000000.0,NetIncomeLoss,7621000000.0,OperatingExpenses,NVDA,0001045810
 2026-07-26,96221000000.0,10-Q,Q2,2027.0,2026-08-26,CY2026Q2,Revenues,59688000000.0,NetIncomeLoss,8408000000.0,OperatingExpenses,NVDA,0001045810
-2019-01-31,137743000000.0,10-K,FY,2019.0,2019-03-28,,RevenueFromContractWithCustomerExcludingAssessedTax,3687000000.0,NetIncomeLoss,,,WMT,0000104169
+2019-01-31,137743000000.0,10-K,Q4,2019.0,2019-03-28,,RevenueFromContractWithCustomerExcludingAssessedTax,3687000000.0,NetIncomeLoss,,,WMT,0000104169
 2019-04-30,122949000000.0,10-Q,Q1,2020.0,2019-06-07,,RevenueFromContractWithCustomerExcludingAssessedTax,3842000000.0,NetIncomeLoss,25946000000.0,SellingGeneralAndAdministrativeExpense,WMT,0000104169
 2019-07-31,129388000000.0,10-Q,Q2,2020.0,2019-09-06,,RevenueFromContractWithCustomerExcludingAssessedTax,3610000000.0,NetIncomeLoss,26871000000.0,SellingGeneralAndAdministrativeExpense,WMT,0000104169
 2019-10-31,126981000000.0,10-Q,Q3,2020.0,2019-12-04,,RevenueFromContractWithCustomerExcludingAssessedTax,3288000000.0,NetIncomeLoss,27373000000.0,SellingGeneralAndAdministrativeExpense,WMT,0000104169
-2020-01-31,140608000000.0,10-K,FY,2020.0,2020-03-20,CY2019Q4,RevenueFromContractWithCustomerExcludingAssessedTax,4141000000.0,NetIncomeLoss,28601000000.0,SellingGeneralAndAdministrativeExpense,WMT,0000104169
+2020-01-31,140608000000.0,10-K,Q4,2020.0,2020-03-20,CY2019Q4,RevenueFromContractWithCustomerExcludingAssessedTax,4141000000.0,NetIncomeLoss,28601000000.0,SellingGeneralAndAdministrativeExpense,WMT,0000104169
 2020-04-30,133672000000.0,10-Q,Q1,2021.0,2020-06-03,,RevenueFromContractWithCustomerExcludingAssessedTax,3990000000.0,NetIncomeLoss,27372000000.0,SellingGeneralAndAdministrativeExpense,WMT,0000104169
 2020-07-31,136824000000.0,10-Q,Q2,2021.0,2020-09-02,,RevenueFromContractWithCustomerExcludingAssessedTax,6476000000.0,NetIncomeLoss,28994000000.0,SellingGeneralAndAdministrativeExpense,WMT,0000104169
 2020-10-31,133752000000.0,10-Q,Q3,2021.0,2020-12-02,,RevenueFromContractWithCustomerExcludingAssessedTax,5135000000.0,NetIncomeLoss,28591000000.0,SellingGeneralAndAdministrativeExpense,WMT,0000104169
