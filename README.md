@@ -67,6 +67,8 @@ To establish an objective "plan" baseline, three candidate models were backteste
 2. **Simple Exponential Smoothing (SES)**: `statsmodels.tsa.holtwinters.SimpleExpSmoothing` with estimated smoothing parameter $\alpha$.
 3. **Linear Trend Regression**: `sklearn.linear_model.LinearRegression` fit over sequential time index.
 
+*Note: Figures below reflect a specific pipeline run. Since ingestion and backtesting re-run against live SEC EDGAR and Yahoo Finance data, exact MAPE/RMSE values will drift slightly (typically within 1-2 percentage points) between runs as new filings post and price history extends. See the live dashboard for current figures.*
+
 ### Out-of-Sample Backtest Performance (MAPE & RMSE)
 
 | Ticker | Model | Out-of-Sample MAPE (%) | RMSE ($) | Empirically Selected |
