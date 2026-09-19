@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BCG X Delivery Finance — Reporting & Anomaly Detection Suite</title>
+  <title>Corporate Financial Overview — Reporting & Anomaly Detection Suite</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     :root {
@@ -18,7 +18,6 @@
       --accent-red: #ef4444;
       --accent-amber: #f59e0b;
       --accent-purple: #8b5cf6;
-      --bcg-green: #00875a;
     }
     * {
       box-sizing: border-box;
@@ -286,7 +285,7 @@
   <div class="top-bar">
     <div class="title-area">
       <h1>
-        BCG X Delivery Finance
+        Corporate Financial Overview
         <span class="badge-hub">Digital Reporting Suite</span>
       </h1>
       <p>Variance Tracking, Multi-Source Consolidation & AI Anomaly Detection</p>
@@ -294,7 +293,7 @@
 
     <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
       <div class="nav-tabs">
-        <button class="tab-btn active" id="tabDelivery" onclick="switchView('delivery')">BCG X Delivery Hubs</button>
+        <button class="tab-btn active" id="tabDelivery" onclick="switchView('delivery')">Regional Business Units</button>
         <button class="tab-btn" id="tabCorporate" onclick="switchView('corporate')">Corporate Benchmarking</button>
       </div>
 
@@ -475,7 +474,7 @@
       document.getElementById('kpiSub4').innerText = lookCount + ' Worth a Look';
 
       // Memo
-      document.getElementById('memoTitle').innerText = 'BCG X Delivery Finance Memo — ' + hub.name;
+      document.getElementById('memoTitle').innerText = 'Corporate Financial Overview Memo — ' + hub.name;
       const latestAnomaly = hub.cycles.slice().reverse().find(c => c.note) || hub.cycles[hub.cycles.length - 1];
       document.getElementById('memoText').innerText = latestAnomaly.note || "Operational performance tracking within standard +/- 3% tolerance of delivery staffing plan.";
       document.getElementById('memoRec').innerText = "Delivery Finance Action: Track near-shore engineering project win conversion and ensure timesheet corrections are signed off prior to month-end close.";
