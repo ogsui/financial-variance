@@ -102,7 +102,7 @@ Using the Pruned Exact Linear Time (**PELT**) algorithm with a Radial Basis Func
 ```python
 import ruptures as rpt
 algo = rpt.Pelt(model="rbf").fit(revenue_normalized)
-changepoints = algo.predict(pen=3.0)
+changepoints = algo.predict(pen=10.0)
 ```
 *Penalty Parameter Tuning*: The default penalty is `pen=10.0`. Lower penalties ($< 5.0$) risk over-segmenting seasonal fluctuations; higher penalties ($> 15.0$) can overlook key inflection quarters (such as Nvidia's Q2 2023 datacenter breakout). Tuning via `--pen` is recommended per dataset.
 
