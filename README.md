@@ -104,7 +104,7 @@ import ruptures as rpt
 algo = rpt.Pelt(model="rbf").fit(revenue_normalized)
 changepoints = algo.predict(pen=3.0)
 ```
-*Penalty Parameter Tuning*: We settled on `pen=3.0` after calibrating on historical step-changes. A penalty $< 2.0$ over-segments seasonal fluctuations; a penalty $> 5.0$ overlooks key inflection quarters (such as Nvidia's Q2 2023 datacenter breakout).
+*Penalty Parameter Tuning*: The default penalty is `pen=10.0`. Lower penalties ($< 5.0$) risk over-segmenting seasonal fluctuations; higher penalties ($> 15.0$) can overlook key inflection quarters (such as Nvidia's Q2 2023 datacenter breakout). Tuning via `--pen` is recommended per dataset.
 
 ### Method B — Rolling Z-Score Against Historical Baseline
 Out-of-sample forecast variance is evaluated against the preceding 4-quarter trailing distribution:
@@ -143,46 +143,6 @@ The project provides three dashboard consumption modes:
 2. **Restatements & Lookahead Bias**: SEC EDGAR `companyfacts` JSON reflects the latest filed version of a metric. While `filed` date filtering is applied, historical restatements (10-Q/A) can occasionally retroactively alter historical numbers that were not visible to decision-makers in real time.
 ---
 
-## 7. Enterprise Translation: Scaling BCG X Delivery Finance Operations
-
-This pipeline's architecture directly mirrors the core responsibilities of enterprise delivery finance teams, specifically supporting **BCG X Delivery** leaders in managing global business units, tracking project codes, and scaling near-shore capability hubs:
-
-```mermaid
-flowchart LR
-    subgraph Multi-Source Ingestion
-        A[Workday / Timesheets] --> D[Reconciliation Engine]
-        B[SAP / Oracle ERP Billing] --> D
-        C[Salesforce CRM / Backlog] --> D
-    end
-
-    subgraph Analytics & Forecasting
-        D --> E[Tolerance Join & Data Audit]
-        E --> F[Walk-Forward Plan Baseline]
-        F --> G[Dual-Method Anomaly Detection]
-    end
-
-    subgraph Delivery Finance Reporting
-        G --> H[High-Confidence Burn Variance]
-        G --> I[Bench Utilization Outliers]
-        H & I --> J[Power BI / Digital Suite & AI Memos]
-    end
-```
-
-### Direct Mapping to Delivery Finance Workflows:
-1. **Multi-Source ERP & Timesheet Consolidation**:
-   - *Project Implementation*: Reconciled quarterly SEC XBRL facts with daily market pricing across conflicting fiscal calendars.
-   - *Delivery Finance Translation*: Consolidates monthly billing milestones (SAP/ERP) with weekly consultant/engineer timesheets (Workday), contracted billing rates, and project codes across 80+ cities.
-2. **Monitoring Actuals vs. Plan Across Capability Hubs**:
-   - *Project Implementation*: Walk-forward backtesting selected empirical revenue models (3.7% MAPE for linear trends).
-   - *Delivery Finance Translation*: Replaces static quarterly targets with empirical run-rate forecasts across regional X Build hubs (North America, EMEA, LATAM near-shore), tracking actual billable revenue against project backlog.
-3. **Project Code & Timesheet Burn-Rate Anomaly Detection**:
-   - *Project Implementation*: Cross-references structural PELT changepoints with rolling $z$-scores ($|z| \ge 2.0$) to flag high-confidence anomalies.
-   - *Delivery Finance Translation*: Flags project codes where developer burn rate suddenly decouples from historical delivery velocity—alerting leadership to scope creep, unbilled hours, or pending timesheet corrections before month-end close.
-4. **AI-Driven Executive Variance Commentary**:
-   - *Project Implementation*: Implemented `ai_executive_summary.py` to synthesize quantitative flags into structured FP&A memos.
-   - *Delivery Finance Translation*: Automates the generation of executive commentary for practice leaders, summarizing revenue impact, staffing bench shifts, and project win ramps.
-
----
 
 ## Quickstart & Reproducibility
 
@@ -223,15 +183,19 @@ financial-variance-dashboard/
 │       ├── backtest_results.csv         # Walk-forward model evaluation metrics (MAPE/RMSE)
 │       ├── forecasts.csv                # Selected baseline forecasts & 4Q projections
 │       ├── anomalies.csv                # Dual-method anomaly flags and confidence tiers
+│       ├── executive_variance_memo.md   # AI-generated executive FP&A memo
 │       └── reconciliation_report.json   # Quality audit log (match rates, calendar offsets)
 ├── src/
 │   ├── __init__.py
+│   ├── config.py                        # Shared configuration constants
+│   ├── http_util.py                     # HTTP session helpers for SEC API
 │   ├── ticker_cik_map.py                # SEC CIK resolution module
 │   ├── ingest_edgar.py                  # SEC EDGAR XBRL extraction engine
 │   ├── ingest_prices.py                 # Yahoo Finance downloader & resampler
 │   ├── reconcile.py                     # Multi-source period normalization & fuzzy join
 │   ├── forecast.py                      # Walk-forward backtesting (Naive, SES, Linear Trend)
 │   ├── anomaly_detect.py                # Dual-method PELT changepoints + rolling z-score
+│   ├── ai_executive_summary.py          # AI-driven executive variance memo generator
 │   └── run_pipeline.py                  # CLI pipeline orchestrator
 ├── notebooks/
 │   ├── exploration.ipynb                # Interactive analytics walkthrough
@@ -240,10 +204,13 @@ financial-variance-dashboard/
 │   ├── index.html                       # Standalone interactive dashboard (HTML5/Chart.js)
 │   ├── dashboard_unified_feed.csv       # Single import feed for Power BI / Tableau
 │   ├── dashboard_data.json              # Dashboard JSON data feed
+│   ├── executive_memo.json              # AI executive memo data feed
 │   ├── README.md                        # Power BI and Tableau setup guide
 │   ├── backtest_comparison.png          # Visual chart asset
 │   ├── NVDA_deepdive.png                # Visual chart asset
 │   └── MSFT_deepdive.png                # Visual chart asset
+├── docs/
+│   └── bcg_x_delivery_translation.md    # Enterprise delivery finance translation guide
 ├── requirements.txt
 └── README.md
 ```

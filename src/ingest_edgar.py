@@ -154,6 +154,12 @@ class EDGARIngester:
 
         # As originally filed: first report for each period end, not later restatements.
         quarterly_df = quarterly_df.sort_values("filed").drop_duplicates(subset=["end"], keep="first")
+
+        # Normalize fp labels: rows that passed the quarterly duration filter (70-105 days)
+        # but carry fp="FY" from EDGAR are actually Q4 filings whose period-end coincides
+        # with the fiscal year-end. Relabel to Q4 for downstream consistency.
+        quarterly_df.loc[quarterly_df["fp"] == "FY", "fp"] = "Q4"
+
         quarterly_df = quarterly_df.rename(columns={"val": metric_name})
         quarterly_df["tag_used_" + metric_name] = matched_tag
         quarterly_df = quarterly_df[quarterly_df[metric_name].map(lambda v: is_plausible_amount(v, metric_name) if metric_name == "revenue" else pd.notna(v))]
