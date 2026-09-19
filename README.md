@@ -209,7 +209,6 @@ financial-variance-dashboard/
 │   ├── backtest_comparison.png          # Visual chart asset
 │   ├── NVDA_deepdive.png                # Visual chart asset
 │   └── MSFT_deepdive.png                # Visual chart asset
-│   translation guide
 ├── requirements.txt
 └── README.md
 ```
