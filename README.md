@@ -139,7 +139,7 @@ The project provides three dashboard consumption modes:
 
 ---
 
-## 6. Honest Limitations
+## 6. Limitations
 
 1. **Survivorship & Sample Scope**: The current pipeline demonstrates 5 high-profile US companies (`AAPL`, `MSFT`, `AMZN`, `NVDA`, `WMT`). Conglomerates with multi-segment restatements (e.g., GE) or pre-revenue startups require specialized segment-level accounting modules.
 2. **Restatements & Lookahead Bias**: SEC EDGAR `companyfacts` JSON reflects the latest filed version of a metric. While `filed` date filtering is applied, historical restatements (10-Q/A) can occasionally retroactively alter historical numbers that were not visible to decision-makers in real time.
@@ -161,14 +161,14 @@ python src/run_pipeline.py
 ```
 *Optional parameters:*
 ```bash
-python src/run_pipeline.py --skip-ingestion   # Run analytics on cached raw data
-python src/run_pipeline.py --pen 3.5 --z 2.0  # Adjust changepoint penalty & z-threshold
+python src/run_pipeline.py --skip-ingestion   
+python src/run_pipeline.py --pen 3.5 --z 2.0  
 ```
 
 ### 3. View Interactive Dashboard
 ```bash
 python -m http.server 8000 --directory dashboard
-# Navigate to http://localhost:8000 in your browser
+# Navigate to http://localhost:8000
 ```
 
 ---
